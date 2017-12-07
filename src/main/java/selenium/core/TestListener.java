@@ -1,6 +1,5 @@
 package selenium.core;
 
-import java.io.File;
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
@@ -8,7 +7,8 @@ import org.openqa.selenium.WebDriver;
 import org.testng.ITestContext;
 import org.testng.ITestListener;
 import org.testng.ITestResult;
-import ru.yandex.qatools.allure.annotations.Attachment;
+
+import java.io.File;
 
 import static com.google.common.io.Files.toByteArray;
 import static selenide.util.PropertiesCache.getProperty;
@@ -32,7 +32,6 @@ public class TestListener implements ITestListener {
         saveScreenshot(iTestResult.getMethod().getMethodName());
     }
 
-    @Attachment(value = "{0}")
     public byte[] saveScreenshot(String screenshotName) {
         try {
             File scrFile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);

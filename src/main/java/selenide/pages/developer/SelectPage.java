@@ -1,16 +1,18 @@
-package selenide.pages.google;
+package selenide.pages.developer;
 
 import com.codeborne.selenide.SelenideElement;
 import org.openqa.selenium.By;
 
 import static com.codeborne.selenide.Selenide.$;
 
-public class SearchPage extends AbstractPage {
+public class SelectPage extends AbstractPage {
 
-    private SelenideElement search = $(By.name("q"));
+    private SelenideElement search = $(By.name("select"));
 
-    public SearchPage searchFor(String searchText) {
+
+    public SelectPage searchFor(String searchText) {
         search.val(searchText).pressEnter();
         return this;
     }
+
 }
