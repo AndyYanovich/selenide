@@ -1,12 +1,12 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
 <suite name="Selenium Tests">
-        <test name = "Google search">
-            <classes>
-                <class name="com.google.GoogleSearchTest"/>
-                <!--<class name="com.google.SelenideGoogleSearchTest"/>-->
-            </classes>
-            <!--<packages>-->
-                <!--<package name="com.google"></package>-->
-            <!--</packages>-->
-        </test>
+    <test name="Google search">
+        <classes>
+            <class name="com.google.GoogleSearchTest"/>
+            <!--<class name="com.google.SelenideGoogleSearchTest"/>-->
+        </classes>
+        <!--<packages>-->
+        <!--<package name="com.google"></package>-->
+        <!--</packages>-->
+    </test>
 </suite>

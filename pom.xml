@@ -18,6 +18,7 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <jetty-maven-plugin.version>9.4.7.v20170914</jetty-maven-plugin.version>
         <maven.surefire.plugin>2.20.1</maven.surefire.plugin>
+        <cucumber.version>1.2.5</cucumber.version>
     </properties>
     <dependencies>
         <dependency>
@@ -46,6 +47,24 @@
             <version>1.5.2</version>
             <scope>test</scope>
         </dependency>
+
+        <dependency>
+            <groupId>info.cukes</groupId>
+            <artifactId>cucumber-java</artifactId>
+            <version>${cucumber.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>info.cukes</groupId>
+            <artifactId>cucumber-testng</artifactId>
+            <version>${cucumber.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>info.cukes</groupId>
+            <artifactId>cucumber-jvm</artifactId>
+            <version>${cucumber.version}</version>
+            <type>pom</type>
+        </dependency>
+
     </dependencies>
     <build>
         <plugins>
